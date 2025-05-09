@@ -36,7 +36,7 @@ You can control each timer individually — start, pause, or reset them.
 
 Each timer shows a progress bar to visualize time left.
 
-_(Can reuse `timers.png` or crop a progress UI screenshot if needed)_
+![Progress Bar](./assets/screenshot/completed-timer.png)
 
 ---
 
@@ -44,7 +44,7 @@ _(Can reuse `timers.png` or crop a progress UI screenshot if needed)_
 
 Use the category header controls to start, pause, or reset all timers within a category.
 
-_(Image optional if already shown above)_
+![Category Controls](./assets/screenshot/multiple-category.png)
 
 ---
 
