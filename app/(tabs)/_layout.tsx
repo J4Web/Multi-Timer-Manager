@@ -1,12 +1,12 @@
 import { Tabs } from 'expo-router';
-import { Timer, ListTodo, History, Settings } from 'lucide-react-native';
+import { Timer, ListTodo, History } from 'lucide-react-native';
 import { Platform, Dimensions } from 'react-native';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function TabLayout() {
   const { colors } = useTheme();
   const isLargeScreen = Dimensions.get('window').width >= 768;
-  
+
   return (
     <Tabs
       screenOptions={{
@@ -39,12 +39,15 @@ export default function TabLayout() {
         tabBarIconStyle: {
           marginBottom: Platform.OS === 'ios' ? -2 : 0,
         },
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Timers',
-          tabBarIcon: ({ color, size }) => <ListTodo size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => (
+            <ListTodo size={size} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -58,14 +61,9 @@ export default function TabLayout() {
         name="history"
         options={{
           title: 'History',
-          tabBarIcon: ({ color, size }) => <History size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: 'Settings',
-          tabBarIcon: ({ color, size }) => <Settings size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => (
+            <History size={size} color={color} />
+          ),
         }}
       />
     </Tabs>
